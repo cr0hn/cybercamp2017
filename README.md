@@ -2,7 +2,7 @@
 
 # Gestión de credenciales
 
-Es una buena práctica gestionar las credenciales como variable de entorno. Resulta más sencillo en el despligue y, además, no insertamos información sensible en nuestro código fuente.
+Es una buena práctica gestionar las credenciales como variable de entorno. Resulta más sencillo en el despliegue y, además, no insertamos información sensible en nuestro código fuente.
 
 Para el trabajo en local, es habitual usar un fichero con nombre **.env**. El fichero tendrá el siguiente formato:
 
@@ -13,11 +13,11 @@ export CF_API_EMAIL=XXXXX
 export CF_API_KEY=XXXXXX
 ``` 
 
-# Dominos
+# Dominios
 
-## Varible de entorno necesarias:
+## Variable de entorno necesarias:
 
-Tras registrar nuestra cuenta de Cloudflare, iremos a nuestra sección privada y obtendremos el API Key. El fichero **.env** debería ser simiar a:
+Tras registrar nuestra cuenta de Cloudflare, iremos a nuestra sección privada y obtendremos el API Key. El fichero **.env** debería ser similar a:
 
 ```bash
 # File .env
@@ -54,6 +54,17 @@ El código de cloudflare_create_domain.py lo podéis descargar desde este mismo 
 El CLI de Rancher se puede descargar desde el propio portal de Rancher. Debajo, a la derecha tenéis los enlaces de descarga.
 
 En los siguientes pasos tratamos de obtener de forma dinámica los puertos ocupados por los balanceadores desplegados en Rancher. Después, usaremos esta información para lanzar, usando una plantilla, un nuevo servicio en un puerto libre: 
+
+## Variables de entorno necesarias:
+
+Tras descargar el cliente, iremos a nuestra sección privada y obtendremos el API Key. El fichero **.env** debería ser similar a:
+
+```bash
+# File .env
+export RANCHER_URL=https://myrancher-panel.eu
+export RANCHER_ACCESS_KEY=XXXXXXXXXX
+export RANCHER_SECRET_KEY=YYYYYYYYYYYYYYYYYYYY
+```
 
 ## Obtener los balanceadores
 
