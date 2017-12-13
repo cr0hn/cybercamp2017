@@ -44,7 +44,7 @@ El código de cloudflare_create_domain.py lo podéis descargar desde este mismo 
 ## Borrar dominio:
 
 ```bash
-> python cloudflare_create_domain.py add my-new-domain.cr0hn.com
+> python cloudflare_create_domain.py remove my-new-domain.cr0hn.com
 ```
 
 # Rancher
